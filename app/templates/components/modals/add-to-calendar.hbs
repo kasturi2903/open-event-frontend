@@ -1,16 +1,16 @@
 <i class="black close icon"></i>
 <div class="header">
-    {{t 'Please choose a calendar'}}
+    {{t 'Please choose a calender'}}
 </div>
 <div class="ui content">
-    {{#each this.calendars as |calendar|}}
+    {{#each this.calenders as |calender|}}
         <div class="ui link list">
             <div class="item">
-                <i class="ui {{calendar.icon}} {{calendar.color}} icon"></i>
+                <i class="ui {{calender.icon}} {{calender.color}} icon"></i>
                 <div class="content">
                     <div class="header">
-                        <a href={{calendar.url}} class="item active" target="_blank" rel="noreferrer nofollow">
-                            {{calendar.name}}
+                        <a href={{calender.url}} class="item active" target="_blank" rel="noreferrer nofollow">
+                            {{calender.name}}
                         </a>
                     </div>
                 </div>
