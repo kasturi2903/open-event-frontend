@@ -3,30 +3,30 @@ import { computed } from '@ember/object';
 import ModalBase from 'open-event-frontend/components/modals/modal-base';
 
 @classic
-export default class AddToCalendarModal extends ModalBase {
+export default class AddToCalenderModal extends ModalBase {
     calendarIcons = {
-      'Google Calendar' : 'google',
-      'iCal'            : 'calendar',
+      'Google Calender' : 'google',
+      'iCal'            : 'calender',
       'Yahoo'           : 'yahoo',
       'Outlook'         : 'microsoft'
     }
 
-    calendarColors = {
-      'Google Calendar' : 'blue',
+    calenderColors = {
+      'Google Calender' : 'blue',
       'iCal'            : 'red',
       'Yahoo'           : 'purple',
       'Outlook'         : 'teal'
     }
 
-    @computed('calendarUrls')
-    get calendars() {
-      return this.calendarUrls.map(calendar => {
-        const newCalendar = {};
-        newCalendar.name = calendar.name;
-        newCalendar.url = calendar.url;
-        newCalendar.icon = this.calendarIcons[calendar.name];
-        newCalendar.color = this.calendarColors[calendar.name];
-        return newCalendar;
+    @computed('calenderUrls')
+    get calenders() {
+      return this.calenderUrls.map(calender => {
+        const newCalender = {};
+        newCalender.name = calender.name;
+        newCalender.url = calender.url;
+        newCalender.icon = this.calenderIcons[calender.name];
+        newCalender.color = this.calenderColors[calender.name];
+        return newCalender;
       });
     }
 }
